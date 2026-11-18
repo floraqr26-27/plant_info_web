@@ -714,60 +714,7 @@ function openPlant(id, updateHistory = true) {
     }
   });
 
-  const url = new URL(window.location.href);
-  url.searchParams.set("plant", id);
-
-  document.getElementById("plantURL").textContent = url.href;
-
-  if (updateHistory) {
-    history.pushState({plant:id}, "", url);
-  }
-
-  window.scrollTo(0,0);
-}
-
-function goHome(updateHistory = true) {
-  document.getElementById("details").classList.add("hidden");
-  document.getElementById("home").classList.remove("hidden");
-  document.getElementById("stats").classList.remove("hidden");
-  document.getElementById("hero").classList.remove("hidden");
-
-  if (updateHistory) {
-    const url = new URL(window.location.href);
-    url.searchParams.delete("plant");
-    history.pushState({}, "", url);
-  }
-
-  window.scrollTo(0,0);
-}
-
-function copyPlantURL() {
-  const url = document.getElementById("plantURL").textContent;
-
-  if (navigator.clipboard && window.isSecureContext) {
-    navigator.clipboard.writeText(url)
-      .then(() => alert("Plant link copied!"))
-      .catch(() => prompt("Copy this link:",url));
-  } else {
-    prompt("Copy this plant link:",url);
-  }
-}
-
-function loadFromURL() {
-  const id = new URLSearchParams(window.location.search).get("plant");
-
-  if (id && plants[id]) {
-    openPlant(id,false);
-  } else {
-    goHome(false);
-  }
-}
-
-window.addEventListener("popstate",loadFromURL);
-
-renderPlants();
-loadFromURL();
-
+  
 </script>
 
 </body>
