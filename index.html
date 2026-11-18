@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>My Information Portal</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6fb;
+  color: #172033;
+}
+
+header {
+  background: #172554;
+  color: white;
+  padding: 28px 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 27px;
+  margin-bottom: 10px;
+}
+
+header p {
+  color: #dbeafe;
+}
+
+.container {
+  max-width: 850px;
+  margin: auto;
+  padding: 22px 16px;
+}
+
+.welcome {
+  background: white;
+  border-radius: 18px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 5px 20px #0000000c;
+}
+
+.welcome h2 {
+  margin-bottom: 12px;
+}
+
+.welcome p {
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.section-title {
+  margin: 28px 0 15px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px #0000000a;
+}
+
+.card .emoji {
+  font-size: 30px;
+  margin-bottom: 12px;
+}
+
+.card h3 {
+  margin-bottom: 8px;
+}
+
+.card p {
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+.info {
+  margin-top: 25px;
+  padding: 23px;
+  background: white;
+  border-radius: 16px;
+  line-height: 1.8;
+}
+
+.info p {
+  color: #64748b;
+}
+
+.action {
+  display: inline-block;
+  margin-top: 18px;
+  background: #2563eb;
+  color: white;
+  padding: 13px 23px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.action:hover {
+  background: #1d4ed8;
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+  color: #64748b;
+  font-size: 13px;
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 23px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Welcome to My Portal</h1>
+  <p>Discover. Explore. Learn.</p>
+</header>
+
+<main class="container">
+
+  <section class="welcome">
+    <h2>Hello, Welcome!</h2>
+    <p>
+      Thank you for scanning this QR code.
+      Here you can discover useful information,
+      explore images and learn more about this subject.
+    </p>
+  </section>
+
+  <h2 class="section-title">Explore More</h2>
+
+  <section class="cards">
+
+    <div class="card">
+      <div class="emoji">📖</div>
+      <h3>About</h3>
+      <p>Write an introduction and important information here.</p>
+    </div>
+
+    <div class="card">
+      <div class="emoji">📸</div>
+      <h3>Gallery</h3>
+      <p>Add pictures and interesting visual information here.</p>
+    </div>
+
+    <div class="card">
+      <div class="emoji">⭐</div>
+      <h3>Interesting Facts</h3>
+      <p>Share interesting facts and important details.</p>
+    </div>
+
+    <div class="card">
+      <div class="emoji">📍</div>
+      <h3>Location</h3>
+      <p>Add the location or relevant address here.</p>
+    </div>
+
+  </section>
+
+  <section class="info">
+    <h2>About This Project</h2>
+    <p>
+      Replace this paragraph with your own content.
+      You can explain the history, purpose, features
+      and other details of your chosen subject.
+    </p>
+
+    <a class="action"
+       href="https://www.google.com"
+       target="_blank">
+       Explore More
+    </a>
+  </section>
+
+  <section class="info">
+    <h2>Contact / More Information</h2>
+    <p>
+      Add your website, project information
+      or other public resources here.
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  <p>Created with ❤️ by Me</p>
+  <p>Thank you for visiting!</p>
+</footer>
+
+</body>
+</html>
